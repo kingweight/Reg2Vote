@@ -44,6 +44,7 @@ export class ErrorComponent {
     cities;
     residenseOption: any[];
     acceptLabel = 'Login Now';
+    loading:boolean = false;
 
     constructor(public authervice: AuthService,
         private router: Router,
@@ -109,6 +110,7 @@ export class ErrorComponent {
     }
 
     submit() {
+        this.loading = true;
         let reqBody:any = {};
         reqBody.firstName = this.firstName;
         reqBody.middleName = this.middleName;
@@ -122,7 +124,7 @@ export class ErrorComponent {
         reqBody.socialSecurity = this.socialSecurityNum;
         reqBody.city = this.selectedCity;
         reqBody.residenseFlag = this.residenseFlag;
-        reqBody.politicalParty = this.selectedParty.name;
+        reqBody.politicalParty = this.selectedParty?.name;
         reqBody.selectedCountryLive = this.selectedCountryLive;
         reqBody.unitNumber = this.unitNumber;
         reqBody.unitType = this.unitType;
@@ -146,6 +148,7 @@ export class ErrorComponent {
         console.log(reqBody);
 
         this.authervice.register(reqBody).then((res:any) => {
+            this.loading = false;
             if (res.success) {
                 this.confirmationService.confirm({
                     message: 'Your registration is now processing, application will be completed around 10 days and we will send updates to your E-mail.',
@@ -159,8 +162,13 @@ export class ErrorComponent {
                         
                     }
                 });
+            } else {
+
             }
             console.log(res);
+        }).catch(e => {
+            this.loading = false;
+            alert("server error!");
         })
     }
 
