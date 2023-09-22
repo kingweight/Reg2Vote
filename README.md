@@ -1,6 +1,14 @@
-# Sakai
+# Register to Vote
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+This project was mainly built using primeng and Angular version 16.
+
+## How to start
+
+Run npm install and npm run start, then access http://localhost:4200/#/landing
+
+## Contributors
+
+Thanks Zhou, Jiabei / Chen, shikai / Liu, Yufang / Zhu, Limy / Liu, Jiachen / Jin, Wei / Lv, Sixu for excellent work on this 24-hours Hackahon!
 
 ## Development server
 
