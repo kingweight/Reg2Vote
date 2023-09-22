@@ -40,7 +40,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
         ];
 
         this.events1 = [
-            { status: 'Register', date: 'Your Status : ' + this.authervice.regitrationStatus, icon: PrimeIcons.SHOPPING_CART, color: '#9C27B0', image: 'game-controller.jpg' },
+            { status: 'Register', date: 'Your Status : ' + 'Completed', icon: PrimeIcons.SHOPPING_CART, color: '#9C27B0', image: 'game-controller.jpg' },
             { status: 'Voting', date: 'Your Status : ' + this.authervice.regitrationStatus, icon: PrimeIcons.COG, color: '#673AB7' },
             { status: 'Delivering', date: 'Your Status : ' + this.authervice.regitrationStatus, icon: PrimeIcons.ENVELOPE, color: '#FF9800' },
             { status: 'Complete', date: 'Your Status : ' + this.authervice.regitrationStatus, icon: PrimeIcons.CHECK, color: '#607D8B' }
